@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bCT3ajeX5MPCM5ckpi5AgSBuQikmGu2r6qVL0eZZILkqJXGrjDBADtvg8YyFD3I4KHjR+AuJ4h0zFWxQsm5tWA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kotoshka\\source\\repos\\DrgMsg\\DrgMsg\\DrgMsg.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kotoshka\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512"
+  ],
+  "logs": []
+}
