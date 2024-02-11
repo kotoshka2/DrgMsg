@@ -1,20 +1,27 @@
-import axios from 'axios';
+import {Routes, Route,} from 'react-router-dom'
 import './App.css';
-import Button from "./Button";
-import {useState} from "react";
-
+import './components/LogPage.css';
+import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterPage";
+import MainPage from "./components/ChatPage";
+import  LayOut from "./components/LayOut";
+import HomePage from "./components/HomePage";
 
 function App() {
-
-
 return(
-    <div className={'Log'}>
-        <h1>Login</h1>
-        <input type="text" placeholder={"Login"}/>
-        <input type="text" placeholder={"Password"}/>
-        <Button></Button>
-    </div>
+    <>
+    <Routes>
+        <Route className={"layout"} path= "/" element={<LayOut/>}>
+            <Route index element={<HomePage/>}/>
+            <Route path="loginform" element={<LoginForm/>}/>
+            <Route path="registerpage" element={<RegisterForm/>}/>
+            <Route path="*" element={<MainPage/>}/>
+        </Route>
+    </Routes>
+    </>
 )
 }
+
+
 
 export default App;

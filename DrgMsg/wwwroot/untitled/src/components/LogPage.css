@@ -1,0 +1,55 @@
+.Log {
+    border: 0 solid;
+    box-shadow: 0 4px 8px 0 rgba(147, 53, 53, 0.41), 0 6px 20px 0 rgba(55, 86, 143, 0.87);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 200px;
+
+
+}
+.Input{
+    box-shadow: 0 4px 8px 0 rgba(147, 53, 53, 0.41), 0 6px 20px 0 rgba(55, 86, 143, 0.87);
+
+    text-align: center;
+    border: 2px;
+    background-color: #3f3f3f;
+    color: white;
+}
+
+.slide:hover,
+.slide:focus {
+    box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+.slide {
+    transition: 0.5s;
+    --color: #601c1c;
+    --hover: #801e1e;
+    border-color: var(--hover);
+
+}
+button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+
+}
+.LogButton:hover,
+.LogButton:focus {
+    box-shadow: inset 8em 0 0 0  var(--hover);
+    color: #ffffff;
+}
+.LogButton {
+
+    transition: 0.5s;
+    --color: #ffffff;
+    --hover: rgba(53, 60, 84, 0.87);
+    border-color: var(--hover);
+    color: #fff;
+}

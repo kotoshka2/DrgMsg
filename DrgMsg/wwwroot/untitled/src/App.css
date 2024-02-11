@@ -1,10 +1,27 @@
-.Log {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    color: #fff;
+    background: #17181c;
+    font: 300 1em "Fira Sans", sans-serif;
+
+    min-height: 100vh;
     display: flex;
+}
+.active{
+    color: aqua;
+}
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
-    gap: 5px;
-    height: 20px;
-    width: 200px;
+
+
 }
