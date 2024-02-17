@@ -15,8 +15,8 @@ return(
             <Route index element={<HomePage/>}/>
             <Route path="loginform" element={<LoginForm/>}/>
             <Route path="registerpage" element={<RegisterForm/>}/>
-            <Route path="*" element={<MainPage/>}/>
         </Route>
+        <Route path={"chat"} element={<MainPage/>}/>
     </Routes>
     </>
 )

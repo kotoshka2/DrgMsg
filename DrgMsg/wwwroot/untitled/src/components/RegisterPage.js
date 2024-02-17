@@ -1,9 +1,11 @@
 import {useState} from "react";
-import axios, {AxiosError} from "axios";
+import axios from "axios";
+import {useNavigate} from "react-router";
 export default function RegisterForm() {
     const [email, setEmail] = useState('')
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
+    const Navigate = useNavigate()
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -16,6 +18,7 @@ export default function RegisterForm() {
         })
             .then((response) => {
                 console.log(response)
+                Navigate("/")
             }).catch(function (error){
             if (error.response.status === 400){
                 alert("ты лох")
@@ -26,7 +29,7 @@ export default function RegisterForm() {
 
     return (
         <div className={'Log'}>
-            <h1>SingUp</h1>
+            <h1 className={"pa"}>SingUp</h1>
             <form method={'post'} onSubmit={handleSubmit}>
                 <input className={'Input'} type="text" placeholder={"Email"} onChange={e => setEmail(e.target.value)}/>
                 <input className={'Input'} type="text" placeholder={"Login"} onChange={e => setLogin(e.target.value)}/>

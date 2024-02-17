@@ -1,9 +1,9 @@
 import {render} from "@testing-library/react";
 export default function HomePage(){
     return(
-        <>
+        <div className={"HomePage"}>
             <h1> O Nas</h1>
-            <p> erewrfwefwefwefwefcwe</p>
-        </>
+            <p> DRGSquad - pediki</p>
+        </div>
     )
 }
