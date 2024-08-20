@@ -57,21 +57,57 @@ body {
 }
 
 .chat{
+    height: 100%;
     position: absolute;
-
-    bottom: 0;
-background-color: #5d5d5d;
-
+    width: 80%;
+    top: 0;
+    background-color: #123f5dbd;
     text-align: center;
-
     margin-left: 30%;
     margin-right: 30%;
-    margin-bottom: 15px;
     padding: 20px 20px 20px 20px;
+}
+.message{
+    overflow-wrap: anywhere;
+    display: flex;
+    text-align: left;
+    margin:  5px;
+    color: #dadada;
+    width: 60%;
+}
+
+.name{
+    background-color: #323e66;
+    border: solid; 
+    border-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    padding: 5px;
+
+}
+.messages{
+    height: 90%;
+    overflow-y: scroll;
+    
+}
+.name2{
+    width:fit-content;
+    overflow-wrap: normal;
+    word-break: normal;
 }
 
 .knopk{
-    color: #5d5d5d;
-    background: none;
+    transition: 0.5s;
+    --color: #ffffff;
+    --hover: rgba(248, 213, 192, 0.6);
+    border-color: var(--hover);
+    color: #fff;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    text-align: center;
+    border: 2px;
+    background-color: #3f3f3f;
+   
 
-}
+ }

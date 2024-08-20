@@ -17,6 +17,7 @@ export default function LoginForm() {
                     console.log(response)
                     sessionStorage.setItem('token', response.data.token)
                     sessionStorage.setItem('user', response.data.user.userName)
+                    sessionStorage.setItem('valid', response.data.validToken)
                     Navigate("/chat")
                 }).catch(function (error){
                     if (error.response.status === 400){

@@ -36,10 +36,6 @@ export default function RegisterForm() {
                 <input className={'Input'} type="text" placeholder={"Password"} onChange={e => setPassword(e.target.value)}/>
                 <button className={'LogButton'} type="submit">SignUp</button>
             </form>
-            <div>
-
-            </div>
-
         </div>
 
     )

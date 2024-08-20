@@ -1,9 +1,11 @@
 import React from "react";
 export default function Message(props){
     return(
-        <div>
-            <p><strong>{props.user}</strong>:</p>
-            <p>{props.message}</p>
+        <div className="message">
+            <span className="name2">{props.user}:</span>
+            <p className="name"><strong></strong>{props.message}</p>
+            
+            
         </div>
     )
 

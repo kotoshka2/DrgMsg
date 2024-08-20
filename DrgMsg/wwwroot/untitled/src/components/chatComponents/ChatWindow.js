@@ -8,7 +8,7 @@ export function ChatWindow(props){
             user={m.user}
             message={m.message}/>);
     return(
-        <div>
+        <div className="messages">
             {chat}
         </div>
     )

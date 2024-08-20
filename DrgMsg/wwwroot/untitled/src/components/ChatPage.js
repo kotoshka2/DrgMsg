@@ -1,16 +1,39 @@
 import React, {useState, useEffect, useRef} from "react";
 import {HubConnectionBuilder} from "@microsoft/signalr";
-
+import {useNavigate} from "react-router";
 import {ChatWindow} from "./chatComponents/ChatWindow";
 import ChatInput   from "./chatComponents/ChatInput";
+import { jwtDecode } from "jwt-decode";
+
 
 export default function MainPage (){
 
         const [ connection, setConnection ] = useState(null);
         const [ chat, setChat ] = useState([]);
         const latestChat = useRef(null);
-        latestChat.current = chat;
+        const logg = sessionStorage.getItem("token")
+        /*const Navigate = useNavigate()
+        var decoded
+        if(logg !== null){
+             decoded = jwtDecode(logg);
+           
+        }
         useEffect(() => {
+            if(logg !== null){
+            
+            if(decoded.validToken !== "true"){
+                Navigate("/")
+            }
+            
+        }
+        else{Navigate("/")}
+        })
+        */
+        latestChat.current = chat;
+        
+        
+        useEffect(() => {
+    
             const newConnection = new HubConnectionBuilder()
                 .withUrl('http://26.254.224.223:7022/chat')
                 .withAutomaticReconnect()
@@ -49,9 +72,10 @@ export default function MainPage (){
         }
             return(
         <div className={"chat"}>
-            <ChatInput sendMessage={sendMessage} />
-            <hr />
             <ChatWindow chat={chat}/>
+            <hr />
+        
+            <ChatInput sendMessage={sendMessage} />
         </div>
     )
 
